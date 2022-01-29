@@ -17,6 +17,8 @@ Requirement:
 - Plugin extension : Python, download at Visual Studio Code.
 - Library package open cv: cv2.
 - Library  package deepface: tutorial deepface at:https://github.com/serengil/deepface
+- Library package matplotlib: matplotlib.
+- Library package numpy: numpy
 - How to install library?: open cmd, and then typing pip install name library.
 - Setting your env variable in path system and user: path/python395,path/python395/Lib, and path/python395/Lib/Scripts.
 
