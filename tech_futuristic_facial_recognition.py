@@ -1,7 +1,7 @@
 from deepface import DeepFace
 import cv2
 import numpy as npy
-
+import matplotlib.pyplot as plott
 print("----------------------------------------------------\n")
 
 programname= "Depression Asisstant GDSC Solution"
@@ -25,9 +25,9 @@ class Analyz():
     def analyz(self):
         print("You're choose analyz emotion\n")
         sad_person_path = ""
-        happy_person_path = ""
-        angry_person_path = ""
-        an_face = DeepFace.analyze(sad_person_path = "",happy_person = "", angry_person_path = "", actions = ['emotion'])
+        an_face = DeepFace.analyze(sad_person_path, actions = ['emotion'])
+        plott.imshow(sad_person_path[:,:,::-1])
+        
         print(an_face)
         webcam = cv2.VideoCapture(0,cv2.CAP_DSHOW)
         while True:
@@ -43,7 +43,15 @@ class Analyz():
             img_array = img_array.reshape(120, 320, 1)
             img_array = np.expand_dims(img_array, axis=0)
 
+            OpenAsisstant = DeepFace.analyze(img_array, actions = ['emotion'])[0][0])
+
+            if actions == 'sad':
+                sadframe = cv2.cvtColor(openwebcam, cv2.COLOR_BGR2GRAY)
+                print("You're Sad,please take a nap today")
+                print(sadframe)
+            
             cv2.imshow("Depression Assistant",openwebcam)
+            print(OpenAsisstant)
             hotkeys_quit = cv2.waitKey(1)
             if hotkeys_quit == ord('q'):
                 break
