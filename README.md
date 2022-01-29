@@ -1,4 +1,4 @@
-Depression Asisstant-GDSC Challenge Solution 
+Depression Asisstant GDSC Challenge Solution 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Depression Asisstant is software can help you give solution.
@@ -16,7 +16,7 @@ Requirement:
 - Text editor / IDE : Visual Studio Code, download at: https://code.visualstudio.com/ https://visualstudio.microsoft.com 
 - Plugin extension : Python, download at Visual Studio Code.
 - Library package open cv: cv2.
-- Library  package deepface: deepface.
+- Library  package deepface: tutorial deepface at:https://github.com/serengil/deepface
 - How to install library?: open cmd, and then typing pip install name library.
 - Setting your env variable in path system and user: path/python395,path/python395/Lib, and path/python395/Lib/Scripts.
 
