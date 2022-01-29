@@ -43,12 +43,18 @@ class Analyz():
             img_array = img_array.reshape(120, 320, 1)
             img_array = np.expand_dims(img_array, axis=0)
 
-            OpenAsisstant = DeepFace.analyze(img_array, actions = ['emotion'])[0][0])
+            OpenAsisstant = DeepFace.analyze(img_array[0][0], actions = ['emotion'])
 
             if actions == 'sad':
-                sadframe = cv2.cvtColor(openwebcam, cv2.COLOR_BGR2GRAY)
+                openwebcam = cv2.cvtColor(openwebcam, cv2.COLOR_BGR2GRAY)
                 print("You're Sad,please take a nap today")
-                print(sadframe)
+
+            if actions == 'happy':
+                print("What's happend you?")
+
+
+            if actions == 'angry':
+                print("Hey,please don't be angry, stay a be calm")
             
             cv2.imshow("Depression Assistant",openwebcam)
             print(OpenAsisstant)
