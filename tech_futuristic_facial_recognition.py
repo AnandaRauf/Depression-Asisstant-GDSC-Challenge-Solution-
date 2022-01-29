@@ -27,8 +27,6 @@ class Analyz():
         sad_person_path = ""
         happy_person_path = ""
         angry_person_path = ""
-        verify_emotion = DeepFace.verify(sad_person_path = "",happy_person = "", angry_person_path = "")
-        print(verify_emotion)
         an_face = DeepFace.analyze(sad_person_path = "",happy_person = "", angry_person_path = "", actions = ['emotion'])
         print(an_face)
         webcam = cv2.VideoCapture(0,cv2.CAP_DSHOW)
