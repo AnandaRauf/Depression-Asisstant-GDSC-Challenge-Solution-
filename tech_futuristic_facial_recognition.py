@@ -24,9 +24,9 @@ class Menu_DepAs():
 class Analyz():
     def analyz(self):
         print("You're choose analyz emotion\n")
-        sad_person_path = ""
-        an_face = DeepFace.analyze(sad_person_path, actions = ['emotion'])
-        plott.imshow(sad_person_path[:,:,::-1])
+        face_person = "rhaina_ngeselin.jpg"
+        an_face = DeepFace.analyze(face_person, actions = ['emotion'])
+        plott.imshow(face_person[:,:,::-1])
         
         print(an_face)
         webcam = cv2.VideoCapture(0,cv2.CAP_DSHOW)
@@ -36,7 +36,7 @@ class Analyz():
             img = img.resize((128, 128))
             img_array = np.array(img)
             img_array = np.expand_dims(img_array, axis=0)
-            frameCopy=openwebcam.copy()
+            frameCopy= openwebcam.copy()
             frameCopy = cv2.resize(frameCopy, (120, 320))
             gray = cv2.cvtColor(frameCopy, cv2.COLOR_BGR2GRAY)
             img_array = np.array(gray)
@@ -45,7 +45,7 @@ class Analyz():
 
             OpenAsisstant = DeepFace.analyze(img_array[0][0], actions = ['emotion'])
 
-            if actions == 'sad':
+            if actions == 'fear':
                 openwebcam = cv2.cvtColor(openwebcam, cv2.COLOR_BGR2GRAY)
                 print("You're Sad,please take a nap today")
 
@@ -53,12 +53,15 @@ class Analyz():
                 print("What's happend you?")
 
 
-            if actions == 'angry':
+            if actions == 'disgust':
                 print("Hey,please don't be angry, stay a be calm")
             
             cv2.imshow("Depression Assistant",openwebcam)
+
             print(OpenAsisstant)
+
             hotkeys_quit = cv2.waitKey(1)
+
             if hotkeys_quit == ord('q'):
                 break
 
