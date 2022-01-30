@@ -14,7 +14,7 @@ print("----------------------------------------------------\n")
 
 print("Welcome to Depression Assistant ^-^")
 
-an_emot = DeepFace.stream("database", model_name='DeepFace', actions['emotions']) #Analyze Emotion from face with using library DeepFace
+an_emot = DeepFace.stream("database", model_name='DeepFace') #Analyze Emotion from face with using library DeepFace
 print(an_emot)
 
 
