@@ -1,6 +1,6 @@
 from deepface import DeepFace
 
-#database is folder data model face emotion
+
 print("----------------------------------------------------\n")
 
 programname= "Depression Asisstant GDSC Solution"
@@ -14,6 +14,7 @@ print("----------------------------------------------------\n")
 
 print("Welcome to Depression Assistant ^-^")
 
+#database is folder data model face emotion
 an_emot = DeepFace.stream("database", model_name='DeepFace') #Analyze Emotion from face with using library DeepFace
 print(an_emot)
 
